@@ -4,6 +4,8 @@ How this project was created:
 
 ```sh
 npx -p @angular/cli ng new ng-tdd-sandbox --prefix tdd --strict --routing --style scss
+cd ng-tdd-sandbox
+npx ng add @angular-eslint/schematics
 ```
 
 ## Development server
