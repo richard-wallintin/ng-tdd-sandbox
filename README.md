@@ -8,7 +8,10 @@ cd ng-tdd-sandbox
 npx ng add @angular-eslint/schematics
 npm install ng-mocks --save-dev
 npm install ts-mockito --save-dev
+npm install @testing-library/angular@10 --save-dev 
 ```
+
+The latest testing-library (v11) was not compatible with Angular v12.
 
 ## Development server
 
