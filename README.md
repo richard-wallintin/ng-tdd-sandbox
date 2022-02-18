@@ -10,6 +10,7 @@ npm install @typescript-eslint/eslint-plugin --save-dev
 npm install ng-mocks --save-dev
 npm install ts-mockito --save-dev
 npm install @testing-library/angular@10 --save-dev 
+npm install karma-mocha-reporter --save-dev
 ```
 
 The latest testing-library (v11) was not compatible with Angular v12.
