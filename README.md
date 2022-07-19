@@ -1,6 +1,6 @@
 # Angular TDD Sandbox
 
-How this project was created:
+How this project was created (roughly):
 
 ```sh
 npx -p @angular/cli ng new ng-tdd-sandbox --prefix tdd --strict --routing --style scss
@@ -13,7 +13,7 @@ npm install @testing-library/angular@10 --save-dev
 npm install karma-mocha-reporter --save-dev
 ```
 
-The latest testing-library (v11) was not compatible with Angular v12.
+Later it was upgraded to Angular 14 using ng update and all dependencies were upgraded using npm.
 
 ## Development server
 
