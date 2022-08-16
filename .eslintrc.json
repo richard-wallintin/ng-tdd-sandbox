@@ -16,10 +16,12 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@typescript-eslint/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/strict",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@typescript-eslint/semi": "error",
         "@angular-eslint/directive-selector": [
           "error",
           {
