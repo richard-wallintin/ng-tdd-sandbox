@@ -1,3 +1,36 @@
+/* === COLOR THEME defined through CSS custom properties ===*/
+// Sass Variables and Functions are only used here
+
+$blue: #414bb2;
+$gray: #6c757d;
+
+:root {
+  --light-fg: white;
+  --dark-fg: black;
+
+  // any default container for text
+  --default-bg: #f8f9fa;
+  --default-fg: var(--dark-fg);
+
+  // primary visual highlight
+  --primary-bg: #{$blue};
+  --primary-bg-shade: #{darken($blue, 10%)};
+  --primary-fg: var(--light-fg);
+
+  // secondary visual elements
+  --secondary-bg: #{$gray};
+  --secondary-bg-shade: #{lighten($gray, 10%)};
+  --secondary-fg: var(--light-fg);
+}
+
+// in dark mode, some colors are adjusted
+.dark-mode {
+  --default-bg: #343a40;
+  --default-fg: var(--light-fg);
+}
+
+/* === GLOBAL PAGE Style === */
+
 html, body {
   width: 100vw;
   min-height: 100vh;
@@ -5,4 +38,7 @@ html, body {
   margin: 0;
 
   font-family: Helvetica, sans-serif;
+
+  background-color: var(--default-bg);
+  color: var(--default-fg);
 }
