@@ -1,32 +1,44 @@
 /* === COLOR THEME defined through CSS custom properties ===*/
 // Sass Variables and Functions are only used here
 
-$blue: #414bb2;
-$gray: #6c757d;
+$primary: #414bb2;
+$primary-light: #8559da;
+$primary-dark: #140078;
+
+$secondary: #00796b;
+$secondary-light: #48a999;
+$secondary-dark: #004c40;
+
+$light-gray: #f8f9fa;
+$dark-gray: #424242;
 
 :root {
   --light-fg: white;
   --dark-fg: black;
 
   // any default container for text
-  --default-bg: #f8f9fa;
+  --default-bg: #{$light-gray};
   --default-fg: var(--dark-fg);
+  --default-divider: rgba(0, 0, 0, 0.12);
 
-  // primary visual highlight
-  --primary-bg: #{$blue};
-  --primary-bg-shade: #{darken($blue, 10%)};
+  // primary visual highlight color
+  --primary: #{$primary};
+  --primary-shade: #{$primary-dark};
   --primary-fg: var(--light-fg);
 
-  // secondary visual elements
-  --secondary-bg: #{$gray};
-  --secondary-bg-shade: #{lighten($gray, 10%)};
+  // secondary visual highlight color
+  --secondary: #{$secondary};
+  --secondary-shade: #{$secondary-light};
   --secondary-fg: var(--light-fg);
 }
 
 // in dark mode, some colors are adjusted
 .dark-mode {
-  --default-bg: #343a40;
+  --default-bg: #{$dark-gray};
   --default-fg: var(--light-fg);
+  --default-divider: rgba(255, 255, 255, 0.12);
+
+  --primary-shade: #{$primary-dark};
 }
 
 /* === GLOBAL PAGE Style === */
