@@ -7,10 +7,14 @@ Use this sandbox project for playing with angular & testing without any legacy i
 You may want to look at the git history of this branch for details. But this is a general overview to understand the project setup.
 
 ```sh
+# initial raw angular project
 npx -p @angular/cli@16 ng new ng-tdd-sandbox --prefix tdd --strict --routing --style scss --directory .
+# ESLint
 npx ng add @angular-eslint/schematics
+# testing tools
 npm install ng-mocks --save-dev
 npm install ts-mockito --save-dev
+npm install @testing-library/angular --save-dev
 ```
 
 
