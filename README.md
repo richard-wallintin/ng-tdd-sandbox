@@ -9,6 +9,8 @@ You may want to look at the git history of this branch for details. But this is 
 ```sh
 npx -p @angular/cli@16 ng new ng-tdd-sandbox --prefix tdd --strict --routing --style scss --directory .
 npx ng add @angular-eslint/schematics
+npm install ng-mocks --save-dev
+npm install ts-mockito --save-dev
 ```
 
 

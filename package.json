@@ -40,6 +40,8 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "ng-mocks": "^14.11.0",
+    "ts-mockito": "^2.6.1",
     "typescript": "~5.1.3"
   }
 }
