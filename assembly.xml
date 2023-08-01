@@ -10,8 +10,7 @@
   <fileSets>
     <fileSet>
       <directory>${basedir}/dist/ng-tdd-sandbox/</directory>
-      <!--suppress CheckTagEmptyBody -->
-      <outputDirectory></outputDirectory>
+      <outputDirectory>.</outputDirectory>
     </fileSet>
   </fileSets>
 </assembly>
