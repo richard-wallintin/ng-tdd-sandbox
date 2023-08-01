@@ -34,6 +34,10 @@ In a next commit, we also re-introduce an explicit "test.ts", which has also bee
 
 * the disable automatic testbed teardown after each test to allow visual inspection during development
 
+### Theming
+
+The global "styles.scss" defines some css variables to be used in components for following a standard color scheme.
+
 ## Main Tasks
 
 * Use `npm run start` to run the application
