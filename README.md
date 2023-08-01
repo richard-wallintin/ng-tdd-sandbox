@@ -17,6 +17,16 @@ npm install ts-mockito --save-dev
 npm install @testing-library/angular --save-dev
 ```
 
+To customize karma some additional steps:
+
+```sh
+npx ng generate config karma
+```
+
+This creates the karma.conf.js which can then be tuned (there is a separate commit for these):
+
+* to include the global stylesheet 
+* and optimize commandline reporting (`npm install karma-mocha-reporter --save-dev`)
 
 ## Main Tasks
 
