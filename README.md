@@ -17,7 +17,9 @@ npm install ts-mockito --save-dev
 npm install @testing-library/angular --save-dev
 ```
 
-To customize karma some additional steps:
+### Karma and TestBed optimizations
+
+To customize karma we need to make some configuration explicit that is otherwise "hidden" in Angular 16:
 
 ```sh
 npx ng generate config karma
@@ -27,6 +29,10 @@ This creates the karma.conf.js which can then be tuned (there is a separate comm
 
 * to include the global stylesheet 
 * and optimize commandline reporting (`npm install karma-mocha-reporter --save-dev`)
+
+In a next commit, we also re-introduce an explicit "test.ts", which has also been "hidden" in Angular 16:
+
+* the disable automatic testbed teardown after each test to allow visual inspection during development
 
 ## Main Tasks
 

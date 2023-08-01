@@ -1,5 +1,13 @@
+import {MockBuilder, MockRender} from "ng-mocks";
+import {AppComponent} from "./app.component";
+import {AppModule} from "./app.module";
+
 describe('AppComponent', () => {
+
+  beforeEach(() => MockBuilder(AppComponent, AppModule))
+
   it('can run tests', () => {
-    expect(1).toBe(1)
+    const fixture = MockRender(AppComponent);
+    expect(fixture).toBeDefined();
   })
 });
