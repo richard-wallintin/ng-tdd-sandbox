@@ -5,7 +5,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "test-once": "ng test --watch false --progress false"
   },
   "private": true,
   "dependencies": {
