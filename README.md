@@ -25,7 +25,12 @@ To customize karma we need to make some configuration explicit that is otherwise
 npx ng generate config karma
 ```
 
-This creates the karma.conf.js which can then be tuned.
+This creates the karma.conf.js which can then be tuned:
+
+* to include the global stylesheet
+* and optimize commandline reporting
+  * `npm install karma-mocha-reporter --save-dev`
+  * `npm uninstall karma-jasmine-html-reporter`
 
 ### Theming
 

@@ -8,9 +8,9 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-mocha-reporter')
     ],
     client: {
       jasmine: {
@@ -19,10 +19,8 @@ module.exports = function (config) {
         // for example, you can disable the random execution with `random: false`
         // or set a specific seed with `seed: 4321`
       },
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
-    },
-    jasmineHtmlReporter: {
-      suppressAll: true // removes the duplicated traces
+      clearContext: false, // leave Jasmine Spec Runner output visible in browser
+      clientDisplayNone: true // drop the "banner" so only testbed is visible
     },
     coverageReporter: {
       dir: require('path').join(__dirname, './coverage/ng-tdd-sandbox'),
@@ -32,7 +30,7 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'mocha'],
     browsers: ['Chrome'],
     restartOnFileChange: true
   });
