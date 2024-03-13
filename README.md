@@ -17,6 +17,16 @@ npm install ts-mockito --save-dev
 npm install @testing-library/angular --save-dev
 ```
 
+### Karma and TestBed optimizations
+
+To customize karma we need to make some configuration explicit that is otherwise "hidden" in Angular 17:
+
+```sh
+npx ng generate config karma
+```
+
+This creates the karma.conf.js which can then be tuned.
+
 ### Theming
 
 The global "styles.scss" defines some css variables to be used in components for following a standard color scheme.
