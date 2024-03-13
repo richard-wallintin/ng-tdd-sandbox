@@ -9,6 +9,8 @@ You may want to look at the git history of this branch for details. But this is 
 ```sh
 # initial raw angular project
 npx -p @angular/cli@17 ng new ng-tdd-sandbox --prefix tdd --strict --routing --standalone --style scss --ssr false --directory .
+# ESLint
+npx ng add @angular-eslint/schematics
 ```
 
 ## Main Tasks
