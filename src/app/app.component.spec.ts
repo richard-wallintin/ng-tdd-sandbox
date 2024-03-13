@@ -1,8 +1,13 @@
 import {AppComponent} from './app.component';
+import {MockBuilder, MockRender} from "ng-mocks";
+import {screen} from "@testing-library/angular";
 
 describe(AppComponent.name, () => {
 
+  beforeEach(() => MockBuilder(AppComponent))
+
   it('should run tests', () => {
-    expect(true).toBeTrue()
+    MockRender(AppComponent)
+    screen.getByText("TDD anyone?")
   });
 });
