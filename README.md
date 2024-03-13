@@ -17,6 +17,10 @@ npm install ts-mockito --save-dev
 npm install @testing-library/angular --save-dev
 ```
 
+### Theming
+
+The global "styles.scss" defines some css variables to be used in components for following a standard color scheme.
+
 ## Main Tasks
 
 * Use `npm run start` to run the application
