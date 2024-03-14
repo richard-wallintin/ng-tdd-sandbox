@@ -1,0 +1,11 @@
+@if (products.length > 0) {
+  @for (product of products; track product) {
+    <tdd-product-list-item
+      [item]="product"
+      (buy)="buy.emit($event)"
+    >
+    </tdd-product-list-item>
+  }
+} @else {
+  <span>No products available</span>
+}
