@@ -5,6 +5,10 @@ import {screen} from "@testing-library/angular";
 
 
 describe('ProductListItemComponent', () => {
+  const item: ProductListItem = {
+    flavor: "Chocolate",
+    priceInEuros: 3
+  }
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -17,11 +21,6 @@ describe('ProductListItemComponent', () => {
   function setupWithChocolateItem() {
     let component: ProductListItemComponent;
     let fixture: ComponentFixture<ProductListItemComponent>;
-
-    const item: ProductListItem = {
-      flavor: "Chocolate",
-      priceInEuros: 3
-    }
 
     fixture = TestBed.createComponent(ProductListItemComponent);
     component = fixture.componentInstance;
@@ -43,11 +42,11 @@ describe('ProductListItemComponent', () => {
 
   it('erlaubt das "Kaufen" des Items', () => {
     const component = setupWithChocolateItem().componentInstance
-    let byuWasClicked = false
-    component.buy.subscribe(() => byuWasClicked = true)
+    let itemWasClicked: ProductListItem|null = null
 
+    component.buy.subscribe((it: ProductListItem) => itemWasClicked = it)
     screen.getByText("Buy").click()
 
-    expect(byuWasClicked).toBeTrue()
+    expect(itemWasClicked as any).toBe(item)
   });
 });

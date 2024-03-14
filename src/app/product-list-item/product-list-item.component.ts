@@ -19,6 +19,6 @@ export class ProductListItemComponent {
   item!: ProductListItem;
 
   @Output()
-  buy = new EventEmitter<void>();
+  buy = new EventEmitter<ProductListItem>();
 
 }
