@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.flavor {
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--primary-fg);
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
